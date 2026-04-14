@@ -10,7 +10,6 @@ function addTask() {
     if (task === "") return;
 
     createTaskElement(task);
-
     saveTask(task);
 
     input.value = "";
@@ -29,6 +28,7 @@ function createTaskElement(taskText) {
     // Delete button
     let delBtn = document.createElement("button");
     delBtn.innerText = "X";
+
     delBtn.onclick = function (e) {
         e.stopPropagation();
         li.remove();
